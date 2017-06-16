@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>HOME</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--<h2>Welcome to Ionic!</h2>-->
+  <!--<button ion-button (click)="gotosecond()">goto_second</button>-->
+  <!--<ion-input type="text" [(ngModel)]="username"></ion-input>-->
+  <!--<p>{{username}}</p>-->
+
+
+
+  <ion-list>
+    <br/>
+    <ion-item  class="input">
+      <ion-input type="text" placeholder="Username" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <br/>
+    <ion-item class="input">
+      <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button class="login" block medium  (click)="login()">LOGIN</button>
+  <br>
+  <br>
+
+  <ion-list>
+
+    <ion-item *ngFor="let item of comment" class="input">
+      <!--<ion-item *ngFor="let item of comment, leti=index;" class="input">-->
+
+        <ion-row>
+
+          <ion-col col-10>
+            <p class="input item">{{item}}</p>
+          </ion-col>
+
+            <ion-col col-2>
+             <ion-icon  class="trash" name="trash" icon-end (click)="delcomments(item)"></ion-icon>
+            </ion-col>
+          <!--<button ion-button small >DELETE</button>-->
+
+        </ion-row>
+
+    </ion-item>
+
+  </ion-list>
+
+  <ion-input type="text" [(ngModel)]="addcomment"></ion-input>
+  <button ion-button class="add" (click)="addcomments()">ADD</button>
+  <br>
+  <br>
+
+
+    <ion-item *ngFor="let item of students" class="item">
+      <ion-row>
+
+
+        <ion-col col-3>{{item.name}} </ion-col>
+        <ion-col col-3>{{item.batch}}</ion-col>
+        <ion-col col-3>{{item.year}}</ion-col>
+
+      </ion-row>
+
+    </ion-item>
+
+
+    <br>
+    <br>
+
+
+
+
+    <!--<ion-row>-->
+
+      <!--<ion-col col-3><ion-input type="text" [(ngModel)]="student_name"></ion-input></ion-col>-->
+      <!--<ion-col col-3><ion-input type="text" [(ngModel)]="student_batch"></ion-input></ion-col>-->
+      <!--<ion-col col-3><ion-input type="text" [(ngModel)]="student_year"></ion-input></ion-col>-->
+
+    <!--</ion-row>-->
+
+    <ion-row class="input">
+    <ion-input type="text" [(ngModel)]="student_name"></ion-input>
+      <ion-input type="text" [(ngModel)]="student_batch"></ion-input>
+        <ion-input type="text" [(ngModel)]="student_year"></ion-input></ion-row>
+
+    <button ion-button class="add" (click)="addStudent()">ADD STUDENT DATA</button>
+
+
+
+
+</ion-content>
