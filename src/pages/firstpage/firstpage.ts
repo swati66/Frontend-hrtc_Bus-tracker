@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {SecondPage} from "../second/second";
 
 /**
  * Generated class for the FirstpagePage page.
@@ -22,5 +23,10 @@ export class FirstpagePage {
     // alert(this.name);
             console.log('ionViewDidLoad FirstpagePage');
 
+  }
+
+  login()
+  {
+    this.navCtrl.push(SecondPage);
   }
 }

@@ -1,4 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 page-second {
+  ion-title{
+    font-family: 'Patrick Hand SC', cursive;
+    font-family: 'Acme', sans-serif;
+    font-size: 24px;
+  }
+
+  .head{
+    font-family: 'Patrick Hand SC', cursive;
+    font-family: 'Acme', sans-serif;
+    font-size: 16px;
+    color: white;
+  }
+
+  .item{
+    font-family: 'Slabo 27px', serif;
+  }
+
+  ion-content
+  {
+    background-color: #2c2c2c !important;
+  }
+
     h1
     {
       color: #2fc579;

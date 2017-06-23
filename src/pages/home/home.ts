@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {SecondPage} from "../second/second";
-import {indexForItem} from "ionic-angular/components/item/item-reorder-util";
+import {FirstpagePage} from "../firstpage/firstpage";
 
 @Component({
   selector: 'page-home',
@@ -47,7 +46,7 @@ export class HomePage {
 
   login() {
     if (this.username == "Swati" && this.password == "12345")
-      this.navCtrl.push(SecondPage, {"user": this.username});
+      this.navCtrl.push(FirstpagePage, {"user": this.username});
   }
 
   addcomments() {

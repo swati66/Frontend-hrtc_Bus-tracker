@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>firstpage</ion-title>
+    <ion-title>LOGIN</ion-title>
   </ion-navbar>
 
 </ion-header >
@@ -15,12 +15,16 @@
 
 <ion-content padding>
 
-  <p>{{name}}</p>
+  <ion-item  class="input">
+    <ion-input type="text" placeholder="Bus Number" [(ngModel)]="busno"></ion-input>
+  </ion-item>
+  <br/>
+  <button ion-button class="login" block medium  (click)="login()">LOGIN</button>
 
 
-  <button ion-button color="secondary">Secondary</button>
 
-  <p class="btn">la la</p>
+
+
 
 
 </ion-content>

@@ -1,9 +1,16 @@
 page-firstpage {
 
-  .btn{
-  height: 30px;
-  color: #007aff;
-}
+  ion-content
+  {
+    background-color: #2c2c2c !important;
+  }
 
+  .login{
+    font-family: 'Patrick Hand SC', cursive;
+    font-family: 'Acme', sans-serif;
+    background-color: #6a6a6a;
+    width: block;
 
+    //align: center;
+  }
 }
