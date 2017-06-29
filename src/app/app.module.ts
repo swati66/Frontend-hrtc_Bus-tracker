@@ -1,5 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
@@ -12,6 +12,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {FirstpagePage} from "../pages/firstpage/firstpage";
 import {SecondPage} from "../pages/second/second";
+import { DatafetchProvider } from '../providers/datafetch/datafetch';
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import {SecondPage} from "../pages/second/second";
     SecondPage,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, HttpModule,
     IonicModule.forRoot(MyApp,{
       tabsHideOnSubPages: true,
     })
@@ -42,7 +44,8 @@ import {SecondPage} from "../pages/second/second";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DatafetchProvider,
   ]
 })
 export class AppModule {}
